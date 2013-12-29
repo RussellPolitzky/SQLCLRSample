@@ -85,7 +85,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>C:\srce\Projects\SQLCLRSample\CLRTestDB\Assemblies\</OutputPath>
     <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <DebugSymbols>true</DebugSymbols>
@@ -108,13 +108,12 @@
     <Folder Include="Properties" />
     <Folder Include="SqlClr" />
     <Folder Include="Queries" />
-    <Folder Include="Scripts" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="Assemblies\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SqlClr\ScalarUDF.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PreDeploy Include="Scripts\Script.PreDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data" />
@@ -128,8 +127,6 @@
     <None Include="SchemaCompare\SqlSchemaCompareProjectToTaregtDB.scmp">
       <Link>SqlSchemaCompareProjectToTaregtDB.scmp</Link>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+    <None Include="Assemblies\UDF_Blog_1.dll" />
   </ItemGroup>
 </Project>
